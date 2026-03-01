@@ -13,7 +13,7 @@
 
     <properties>
         <testngXmlDir>src/test/resources/config</testngXmlDir>
-        <testngXmlFile>myDemoTests-Desktop.xml</testngXmlFile>
+        <testngXmlFile>myDemoTests.xml</testngXmlFile>
         <testng.version>7.5</testng.version>
         <selenium.version>4.25.0</selenium.version>
     </properties>

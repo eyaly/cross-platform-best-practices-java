@@ -7,6 +7,7 @@
 		<parameter name="platformName" value="windows 10"></parameter>
 		<parameter name="sauce_tags" value="Demo,Web,W3"></parameter>
 		<parameter name="sauce_screenResolution" value="1600x1200"></parameter>
+		<parameter name="sauce_build" value="demo_java_2"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoBasicTest"></class>
 			<class name="com.saucelabs.tests.DemoLoginTest"></class>
@@ -19,6 +20,33 @@
 		<parameter name="platformName" value="macOS 11.00"></parameter>
 		<parameter name="sauce_tags" value="Demo,Web,W3"></parameter>
 		<parameter name="sauce_screenResolution" value="1024x768"></parameter>
+		<parameter name="sauce_build" value="demo_java_2"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoBasicTest"></class>
+			<class name="com.saucelabs.tests.DemoLoginTest"></class>
+		</classes>
+	</test>
+
+	<test name="Mac Safari Latest Demo App Arm" parallel="methods"  enabled="true">
+		<parameter name="browserName" value="safari"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="platformName" value="macOS 15"></parameter>
+		<parameter name="sauce_tags" value="Demo,Web,W3,arm"></parameter>
+		<parameter name="sauce_armRequired" value="true"></parameter>
+		<parameter name="sauce_build" value="demo_java_2"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoBasicTest"></class>
+			<class name="com.saucelabs.tests.DemoLoginTest"></class>
+		</classes>
+	</test>
+
+	<test name="Mac Safari Latest Demo App Intel" parallel="methods"  enabled="true">
+		<parameter name="browserName" value="safari"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="platformName" value="macOS 13"></parameter>
+		<parameter name="sauce_tags" value="Demo,Web,W3,intel"></parameter>
+		<parameter name="sauce_armRequired" value="false"></parameter>
+		<parameter name="sauce_build" value="demo_java_2"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoBasicTest"></class>
 			<class name="com.saucelabs.tests.DemoLoginTest"></class>

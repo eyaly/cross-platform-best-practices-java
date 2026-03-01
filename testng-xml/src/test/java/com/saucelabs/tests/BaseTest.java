@@ -25,7 +25,7 @@ public class BaseTest {
     protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     private String SAUCE_EU_URL = "https://ondemand.eu-central-1.saucelabs.com/wd/hub";
-    private String SAUCE_US_URL = "https://ondemand.us-west-1.saucelabs.com/wd/hub";
+    private String SAUCE_US_URL = "https://ondemand.saucelabs.com/wd/hub";
     private String SAUCE_CAP = "sauce_";
     protected String WEB_URL = "https://www.saucedemo.com/";
 
@@ -76,8 +76,8 @@ public class BaseTest {
         sauceOptions.setCapability("username", System.getenv("SAUCE_USERNAME"));
         sauceOptions.setCapability("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
         sauceOptions.setCapability("name", methodName);
-        sauceOptions.setCapability("extendedDebugging", true);
-        sauceOptions.setCapability("capturePerformance", true);
+//        sauceOptions.setCapability("extendedDebugging", true);
+//        sauceOptions.setCapability("capturePerformance", true);
 
         if (!isBuildCap) { //handle build cap
             LocalDateTime dateTime = LocalDateTime.now();

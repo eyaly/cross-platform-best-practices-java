@@ -7,6 +7,7 @@
 		<parameter name="platformName" value="windows 10"></parameter>
 		<parameter name="sauce_tags" value="Demo,Web,W3"></parameter>
 		<parameter name="sauce_screenResolution" value="1600x1200"></parameter>
+		<parameter name="sauce_build" value="demo_java_3"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoBasicTest"></class>
 			<class name="com.saucelabs.tests.DemoLoginTest"></class>
@@ -19,36 +20,39 @@
 		<parameter name="platformName" value="macOS 11.00"></parameter>
 		<parameter name="sauce_tags" value="Demo,Web,W3"></parameter>
 		<parameter name="sauce_screenResolution" value="1024x768"></parameter>
+		<parameter name="sauce_build" value="demo_java_3"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoBasicTest"></class>
 			<class name="com.saucelabs.tests.DemoLoginTest"></class>
 		</classes>
 	</test>
 
-<!--	<test name="Android Web Demo App Emulator" enabled="false">-->
-<!--		<parameter name="browserName" value="chrome"></parameter>-->
-<!--		<parameter name="platformName" value="android"></parameter>-->
-<!--		<parameter name="appium:automationName" value="UiAutomator2"></parameter>-->
-<!--		<parameter name="appium:deviceName" value="Android GoogleAPI Emulator"></parameter>-->
-<!--		<parameter name="appium:platformVersion" value="11.0"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="com.saucelabs.tests.DemoBasicTest"></class>-->
-<!--&lt;!&ndash;			<class name="com.saucelabs.tests.DemoLoginTest"></class>&ndash;&gt;-->
-<!--		</classes>-->
-<!--	</test>-->
-
-	<test name="iOS Web Demo App Simulator" parallel="methods" enabled="true">
+	<test name="Mac Safari Latest Demo App Arm" parallel="methods"  enabled="true">
 		<parameter name="browserName" value="safari"></parameter>
-		<parameter name="platformName" value="iOS"></parameter>
-		<parameter name="appium:automationName" value="XCuiTest"></parameter>
-		<parameter name="appium:deviceName" value="iPhone Instant Simulator"></parameter>
-		<parameter name="appium:platformVersion" value="current_major"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="platformName" value="macOS 15"></parameter>
+		<parameter name="sauce_tags" value="Demo,Web,W3,arm"></parameter>
+		<parameter name="sauce_armRequired" value="true"></parameter>
+		<parameter name="sauce_build" value="demo_java_3"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoBasicTest"></class>
 			<class name="com.saucelabs.tests.DemoLoginTest"></class>
 		</classes>
 	</test>
 
+	<test name="Mac Safari Latest Demo App Intel" parallel="methods"  enabled="true">
+		<parameter name="browserName" value="safari"></parameter>
+		<parameter name="browserVersion" value="latest"></parameter>
+		<parameter name="platformName" value="macOS 13"></parameter>
+		<parameter name="sauce_tags" value="Demo,Web,W3,intel"></parameter>
+		<parameter name="sauce_armRequired" value="false"></parameter>
+		<parameter name="sauce_build" value="demo_java_3"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.DemoBasicTest"></class>
+			<class name="com.saucelabs.tests.DemoLoginTest"></class>
+		</classes>
+	</test>
+	
 	<test name="Android Web Demo App" parallel="methods" enabled="true">
 		<parameter name="browserName" value="chrome"></parameter>
 		<parameter name="platformName" value="android"></parameter>
@@ -56,6 +60,8 @@
 		<parameter name="appium:deviceName" value="samsung.*"></parameter>
 		<parameter name="appium:platformVersion" value="^1[2-3].*"></parameter>
 		<parameter name="sauce_cacheId" value="android_web_123"></parameter>
+		<parameter name="sauce_appiumversion" value="latest"></parameter>
+		<parameter name="sauce_build" value="demo_java_3"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoBasicTest"></class>
 			<class name="com.saucelabs.tests.DemoLoginTest"></class>
@@ -69,6 +75,8 @@
 		<parameter name="appium:deviceName" value="iPhone.*"></parameter>
 		<parameter name="appium:platformVersion" value="^1[5-6].*"></parameter>
 		<parameter name="sauce_cacheId" value="ios_web_123"></parameter>
+		<parameter name="sauce_appiumversion" value="latest"></parameter>
+		<parameter name="sauce_build" value="demo_java_3"></parameter>
 		<classes>
 			<class name="com.saucelabs.tests.DemoBasicTest"></class>
 			<class name="com.saucelabs.tests.DemoLoginTest"></class>
